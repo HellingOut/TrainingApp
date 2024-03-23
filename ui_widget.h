@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 6.6.1
+** Created by: Qt User Interface Compiler version 6.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -103,16 +103,19 @@ public:
     QLabel *help_3;
     QLabel *right_answers_count_3;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pause_audio;
     QPushButton *play_audio;
-    QPushButton *replay_audio;
+    QWidget *practice_results;
+    QWidget *gridLayoutWidget_2;
+    QGridLayout *gridLayout_2;
+    QLabel *label;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
             Widget->setObjectName("Widget");
         Widget->resize(1280, 720);
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(Widget->sizePolicy().hasHeightForWidth());
@@ -203,7 +206,7 @@ public:
 
         vbox_test->addWidget(variant_3);
 
-        verticalSpacer = new QSpacerItem(20, 50, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        verticalSpacer = new QSpacerItem(20, 50, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         vbox_test->addItem(verticalSpacer);
 
@@ -212,7 +215,7 @@ public:
         bottom_bar->setSizeConstraint(QLayout::SetFixedSize);
         right_answers_count = new QLabel(verticalLayoutWidget_3);
         right_answers_count->setObjectName("right_answers_count");
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(right_answers_count->sizePolicy().hasHeightForWidth());
@@ -222,7 +225,7 @@ public:
 
         next = new QPushButton(verticalLayoutWidget_3);
         next->setObjectName("next");
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(next->sizePolicy().hasHeightForWidth());
@@ -287,7 +290,7 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         doorway_label = new QLabel(gridLayoutWidget);
         doorway_label->setObjectName("doorway_label");
-        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(doorway_label->sizePolicy().hasHeightForWidth());
@@ -309,7 +312,7 @@ public:
 
         help_2 = new QLabel(gridLayoutWidget);
         help_2->setObjectName("help_2");
-        QSizePolicy sizePolicy4(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
         sizePolicy4.setHeightForWidth(help_2->sizePolicy().hasHeightForWidth());
@@ -565,7 +568,7 @@ public:
 
         description_entry = new QTextEdit(gridLayoutWidget);
         description_entry->setObjectName("description_entry");
-        QSizePolicy sizePolicy5(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy5(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Fixed);
         sizePolicy5.setHorizontalStretch(0);
         sizePolicy5.setVerticalStretch(0);
         sizePolicy5.setHeightForWidth(description_entry->sizePolicy().hasHeightForWidth());
@@ -597,29 +600,38 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
-        pause_audio = new QPushButton(gridLayoutWidget);
-        pause_audio->setObjectName("pause_audio");
 
-        horizontalLayout_2->addWidget(pause_audio);
+        gridLayout->addLayout(horizontalLayout_2, 7, 6, 1, 1);
 
         play_audio = new QPushButton(gridLayoutWidget);
         play_audio->setObjectName("play_audio");
 
-        horizontalLayout_2->addWidget(play_audio);
-
-        replay_audio = new QPushButton(gridLayoutWidget);
-        replay_audio->setObjectName("replay_audio");
-
-        horizontalLayout_2->addWidget(replay_audio);
-
-
-        gridLayout->addLayout(horizontalLayout_2, 7, 6, 1, 1);
+        gridLayout->addWidget(play_audio, 14, 6, 1, 1);
 
         pages->addWidget(practice);
+        practice_results = new QWidget();
+        practice_results->setObjectName("practice_results");
+        gridLayoutWidget_2 = new QWidget(practice_results);
+        gridLayoutWidget_2->setObjectName("gridLayoutWidget_2");
+        gridLayoutWidget_2->setGeometry(QRect(5, 9, 1241, 681));
+        gridLayout_2 = new QGridLayout(gridLayoutWidget_2);
+        gridLayout_2->setObjectName("gridLayout_2");
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(gridLayoutWidget_2);
+        label->setObjectName("label");
+
+        gridLayout_2->addWidget(label, 0, 0, 1, 1);
+
+        pushButton = new QPushButton(gridLayoutWidget_2);
+        pushButton->setObjectName("pushButton");
+
+        gridLayout_2->addWidget(pushButton, 0, 1, 1, 1);
+
+        pages->addWidget(practice_results);
 
         retranslateUi(Widget);
 
-        pages->setCurrentIndex(3);
+        pages->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -678,9 +690,9 @@ public:
         next_situation->setText(QCoreApplication::translate("Widget", "\320\241\320\273\320\265\320\264\321\203\321\211\320\260\321\217 \321\201\320\270\321\202\321\203\320\260\321\206\320\270\321\217", nullptr));
         help_3->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\267\320\260\321\217\320\262\320\270\321\202\320\265\320\273\320\265", nullptr));
         right_answers_count_3->setText(QCoreApplication::translate("Widget", "\320\237\321\200\320\260\320\262\320\270\320\273\321\214\320\275\321\213\321\205 \320\276\321\202\320\262\320\265\321\202\320\276\320\262: 0", nullptr));
-        pause_audio->setText(QCoreApplication::translate("Widget", "Pause", nullptr));
         play_audio->setText(QCoreApplication::translate("Widget", "Play", nullptr));
-        replay_audio->setText(QCoreApplication::translate("Widget", "Replay", nullptr));
+        label->setText(QCoreApplication::translate("Widget", "\320\234\320\276\320\264\321\203\320\273\321\214 3 \320\277\321\200\320\276\320\271\320\264\320\265\320\275. \320\237\321\200\320\260\320\262\320\270\320\273\321\214\320\275\321\213\321\205 \320\276\321\202\320\262\320\265\321\202\320\276\320\262 - ", nullptr));
+        pushButton->setText(QCoreApplication::translate("Widget", "\320\235\320\260\320\267\320\260\320\264", nullptr));
     } // retranslateUi
 
 };

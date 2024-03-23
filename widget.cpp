@@ -95,8 +95,10 @@ void Widget::on_next_situation_pressed()
 
     bool is_wrong = false;
     for(int i = 0; i < entries.size(); i++){
-        if(entries.at(i)->text() != practice_questions.at(current_question).entries.at(i))
+        if(entries.at(i)->text() != practice_questions.at(current_question).entries.at(i)){
             is_wrong = true;
+            entries.at(i)->setStyleSheet("background:#ec755b");
+        }
     }
     for(int i = 0; i < big_entries.size(); i++){
         if(big_entries.at(i)->toPlainText() != practice_questions.at(current_question).big_entries.at(i))
