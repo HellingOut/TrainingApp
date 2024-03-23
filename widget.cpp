@@ -94,7 +94,7 @@ void Widget::on_next_situation_pressed()
         ui->incident_vid_combox,
         ui->incident_type_combox
     };
-
+    /*
     bool is_wrong = false;
     for(int i = 0; i < entries.size(); i++){
         if(entries.at(i)->text() != practice_questions.at(current_question).entries.at(i)){
@@ -122,32 +122,31 @@ void Widget::on_next_situation_pressed()
         right_answers_count++;
         ui->right_answers_count_3->setText("Правильных ответов: " + QString::number(right_answers_count));
     }
-    if(is_task_completed){
-        for(int i = 0; i < entries.size(); i++){
-            entries.at(i)->setText("");
-        }
-        for(int i = 0; i < big_entries.size(); i++){
-            big_entries.at(i)->setPlainText("");
-        }
-        for(int i = 0; i < checkboxes.size(); i++){
-            checkboxes.at(i)->setChecked(false);
-        }
-        for(int i = 0; i < combo_boxes.size(); i++){
-            combo_boxes.at(i)->setCurrentIndex(0);
-        }
+    */
+    for(int i = 0; i < entries.size(); i++){
+        entries.at(i)->setText("");
     }
-    if(is_task_completed){
-        is_task_completed = false;
-        if(current_question < practice_questions_count-1){
-            current_question += 1;
-        }
-        else{
-            ui->pages->setCurrentIndex(2);
-            ui->right_answers_count_2->setText("Правильных ответов: "+ QString::number(right_answers_count));
-        }
-        return;
+    for(int i = 0; i < big_entries.size(); i++){
+        big_entries.at(i)->setPlainText("");
     }
-    is_task_completed = true;
+    for(int i = 0; i < checkboxes.size(); i++){
+        checkboxes.at(i)->setChecked(false);
+    }
+    for(int i = 0; i < combo_boxes.size(); i++){
+        combo_boxes.at(i)->setCurrentIndex(0);
+    }/*
+    if(is_task_completed){
+        is_task_completed = false;*/
+    if(current_question < practice_questions_count-1){
+        current_question += 1;
+    }
+    else{
+        ui->pages->setCurrentIndex(0);
+        reset_questions();
+    }
+    /*return;
+    }
+    is_task_completed = true;*/
 }
 Widget::~Widget(){delete ui;}
 
