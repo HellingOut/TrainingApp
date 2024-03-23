@@ -10,7 +10,7 @@
 #include <QUrl>
 #include <QAudioOutput>
 
-bool is_task_completed = false;
+bool is_next_presed = false;
 
 //Объявляем список из вопросов
 QList<question> questions;
@@ -25,7 +25,6 @@ ushort practice_questions_count = 0;
 
 void reset_questions(){
     current_question = 0;
-    current_variant = 0;
     right_answers_count = 0;
 }
 
@@ -54,13 +53,34 @@ void Widget::update_question(){
 }
 //При нажатии на следующий вопрос - тестовая часть
 void Widget::on_next_pressed(){
-    if(current_variant == questions.at(current_question).right_answer)
+    QList<QRadioButton*> checkboxes = {
+        ui->variant_1,
+        ui->variant_2,
+        ui->variant_3
+    };
+    if(current_variant == questions.at(current_question).right_answer and !is_next_presed){
         right_answers_count++;
-    if(current_question < questions_count-1)
+        checkboxes.at(current_variant-1)->setStyleSheet("background:#84e97a");
+    }
+    else if(current_variant != 0){
+        checkboxes.at(current_variant-1)->setStyleSheet("background:#e97a7a");
+        checkboxes.at(questions.at(current_question).right_answer-1)->setStyleSheet("background:#84e97a");
+    }
+    else {
+        checkboxes.at(questions.at(current_question).right_answer-1)->setStyleSheet("background:#e97a7a");
+    }
+    if(current_question < questions_count-1 and is_next_presed){
         current_question++;
-    else
+        for(int i = 0; i < checkboxes.size(); i++){
+            checkboxes.at(i)->setStyleSheet("background:#f0f0f0");
+        }
+        is_next_presed = false;
+        update_question();
+        return;
+    }
+    else if(is_next_presed)
         ui->pages->setCurrentIndex(2);
-    update_question();
+    is_next_presed = true;
 }
 
 //При нажатии на следущую ситуацию - практика
@@ -94,35 +114,6 @@ void Widget::on_next_situation_pressed()
         ui->incident_vid_combox,
         ui->incident_type_combox
     };
-    /*
-    bool is_wrong = false;
-    for(int i = 0; i < entries.size(); i++){
-        if(entries.at(i)->text() != practice_questions.at(current_question).entries.at(i)){
-            is_wrong = true;
-            entries.at(i)->setStyleSheet("background:#ec755b");
-            entries.at(i)->setText(practice_questions.at(current_question).entries.at(i));
-        }
-        else{
-            entries.at(i)->setStyleSheet("background:#84e97a");
-        }
-    }
-    for(int i = 0; i < big_entries.size(); i++){
-        if(big_entries.at(i)->toPlainText() != practice_questions.at(current_question).big_entries.at(i))
-            is_wrong = true;
-    }
-    for(int i = 0; i < checkboxes.size(); i++){
-        if(checkboxes.at(i)->isChecked() != practice_questions.at(current_question).checkboxes.at(i))
-            is_wrong = true;
-    }
-    for(int i = 0; i < combo_boxes.size(); i++){
-        if(combo_boxes.at(i)->currentIndex() != practice_questions.at(current_question).combo_boxes.at(i))
-            is_wrong = true;
-    }
-    if(!is_wrong and !is_task_completed){
-        right_answers_count++;
-        ui->right_answers_count_3->setText("Правильных ответов: " + QString::number(right_answers_count));
-    }
-    */
     for(int i = 0; i < entries.size(); i++){
         entries.at(i)->setText("");
     }
@@ -134,9 +125,7 @@ void Widget::on_next_situation_pressed()
     }
     for(int i = 0; i < combo_boxes.size(); i++){
         combo_boxes.at(i)->setCurrentIndex(0);
-    }/*
-    if(is_task_completed){
-        is_task_completed = false;*/
+    }
     if(current_question < practice_questions_count-1){
         current_question += 1;
     }
@@ -144,9 +133,6 @@ void Widget::on_next_situation_pressed()
         ui->pages->setCurrentIndex(0);
         reset_questions();
     }
-    /*return;
-    }
-    is_task_completed = true;*/
 }
 Widget::~Widget(){delete ui;}
 
@@ -157,9 +143,9 @@ void Widget::on_module_1_pressed() {
 
 void Widget::on_module_2_pressed()
 {
+    reset_questions();
     questions = load_questions("test_1.json");
     questions_count = questions.size();
-    reset_questions();
     ui->pages->setCurrentIndex(1);
     update_question();
 }

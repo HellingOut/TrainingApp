@@ -60,50 +60,50 @@ public:
     QWidget *practice;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QLabel *doorway_label;
-    QCheckBox *is_04;
-    QLineEdit *house_entry;
-    QLabel *help_2;
-    QLineEdit *phone_entry;
-    QLabel *help_4;
-    QCheckBox *is_thread;
-    QLabel *subject_label;
-    QLabel *house_label;
     QComboBox *incident_vid_combox;
+    QLabel *floor_label;
+    QCheckBox *is_02;
     QLabel *street_label;
-    QVBoxLayout *verticalLayout_3;
-    QLineEdit *victims_entry;
-    QLineEdit *deads_entry;
+    QCheckBox *is_emergency;
+    QLineEdit *street_entry;
+    QLabel *phone_label;
+    QLineEdit *full_name_entry;
+    QLabel *help_3;
+    QLabel *incident_vid_label;
+    QCheckBox *is_03;
+    QLineEdit *adress_entry;
     QVBoxLayout *verticalLayout_4;
     QLabel *victims;
     QLabel *deads;
-    QLabel *help;
-    QLabel *floor_label;
-    QLabel *incident_type_label;
-    QCheckBox *is_emergency;
-    QLabel *description_label;
     QLineEdit *floor_entry;
-    QCheckBox *is_02;
-    QLineEdit *street_entry;
-    QLabel *full_name_label;
-    QLineEdit *subject_entry;
-    QLineEdit *adress_entry;
-    QCheckBox *is_03;
-    QLineEdit *full_name_entry;
-    QCheckBox *is_01;
-    QLabel *flat_label;
-    QLabel *adress_label;
-    QLabel *incident_vid_label;
-    QLabel *phone_label;
-    QLineEdit *flat_entry;
-    QComboBox *incident_type_combox;
-    QLineEdit *doorway_entry;
     QTextEdit *description_entry;
-    QPushButton *next_situation;
-    QLabel *help_3;
-    QLabel *right_answers_count_3;
+    QLabel *subject_label;
+    QLabel *house_label;
+    QCheckBox *is_04;
     QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *help_2;
+    QLabel *help_4;
+    QLabel *adress_label;
+    QCheckBox *is_01;
+    QVBoxLayout *verticalLayout_3;
+    QLineEdit *victims_entry;
+    QLineEdit *deads_entry;
+    QLabel *help;
+    QLabel *flat_label;
+    QLineEdit *doorway_entry;
+    QLineEdit *flat_entry;
+    QLabel *description_label;
+    QLineEdit *subject_entry;
+    QLabel *doorway_label;
+    QCheckBox *is_thread;
+    QLabel *incident_type_label;
+    QComboBox *incident_type_combox;
+    QLabel *full_name_label;
+    QLineEdit *house_entry;
+    QLineEdit *phone_entry;
     QPushButton *play_audio;
+    QPushButton *next_situation;
 
     void setupUi(QWidget *Widget)
     {
@@ -283,82 +283,6 @@ public:
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        doorway_label = new QLabel(gridLayoutWidget);
-        doorway_label->setObjectName("doorway_label");
-        QSizePolicy sizePolicy3(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(doorway_label->sizePolicy().hasHeightForWidth());
-        doorway_label->setSizePolicy(sizePolicy3);
-        doorway_label->setAutoFillBackground(false);
-        doorway_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(doorway_label, 2, 0, 1, 1);
-
-        is_04 = new QCheckBox(gridLayoutWidget);
-        is_04->setObjectName("is_04");
-
-        gridLayout->addWidget(is_04, 14, 4, 1, 1);
-
-        house_entry = new QLineEdit(gridLayoutWidget);
-        house_entry->setObjectName("house_entry");
-
-        gridLayout->addWidget(house_entry, 1, 4, 1, 1);
-
-        help_2 = new QLabel(gridLayoutWidget);
-        help_2->setObjectName("help_2");
-        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(help_2->sizePolicy().hasHeightForWidth());
-        help_2->setSizePolicy(sizePolicy4);
-        QFont font2;
-        font2.setPointSize(14);
-        font2.setBold(true);
-        help_2->setFont(font2);
-        help_2->setAutoFillBackground(false);
-        help_2->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(help_2, 3, 2, 1, 1);
-
-        phone_entry = new QLineEdit(gridLayoutWidget);
-        phone_entry->setObjectName("phone_entry");
-
-        gridLayout->addWidget(phone_entry, 13, 2, 1, 1);
-
-        help_4 = new QLabel(gridLayoutWidget);
-        help_4->setObjectName("help_4");
-        sizePolicy4.setHeightForWidth(help_4->sizePolicy().hasHeightForWidth());
-        help_4->setSizePolicy(sizePolicy4);
-        help_4->setFont(font2);
-        help_4->setAutoFillBackground(false);
-        help_4->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(help_4, 10, 4, 1, 1);
-
-        is_thread = new QCheckBox(gridLayoutWidget);
-        is_thread->setObjectName("is_thread");
-
-        gridLayout->addWidget(is_thread, 4, 4, 1, 1);
-
-        subject_label = new QLabel(gridLayoutWidget);
-        subject_label->setObjectName("subject_label");
-        sizePolicy3.setHeightForWidth(subject_label->sizePolicy().hasHeightForWidth());
-        subject_label->setSizePolicy(sizePolicy3);
-        subject_label->setAutoFillBackground(false);
-        subject_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(subject_label, 2, 5, 1, 1);
-
-        house_label = new QLabel(gridLayoutWidget);
-        house_label->setObjectName("house_label");
-        sizePolicy3.setHeightForWidth(house_label->sizePolicy().hasHeightForWidth());
-        house_label->setSizePolicy(sizePolicy3);
-        house_label->setAutoFillBackground(false);
-        house_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(house_label, 1, 3, 1, 1);
-
         incident_vid_combox = new QComboBox(gridLayoutWidget);
         incident_vid_combox->addItem(QString());
         incident_vid_combox->addItem(QString());
@@ -367,6 +291,23 @@ public:
         incident_vid_combox->setObjectName("incident_vid_combox");
 
         gridLayout->addWidget(incident_vid_combox, 4, 2, 1, 1);
+
+        floor_label = new QLabel(gridLayoutWidget);
+        floor_label->setObjectName("floor_label");
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(floor_label->sizePolicy().hasHeightForWidth());
+        floor_label->setSizePolicy(sizePolicy3);
+        floor_label->setAutoFillBackground(false);
+        floor_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(floor_label, 1, 5, 1, 1);
+
+        is_02 = new QCheckBox(gridLayoutWidget);
+        is_02->setObjectName("is_02");
+
+        gridLayout->addWidget(is_02, 12, 4, 1, 1);
 
         street_label = new QLabel(gridLayoutWidget);
         street_label->setObjectName("street_label");
@@ -377,20 +318,64 @@ public:
 
         gridLayout->addWidget(street_label, 1, 0, 1, 1);
 
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
-        victims_entry = new QLineEdit(gridLayoutWidget);
-        victims_entry->setObjectName("victims_entry");
+        is_emergency = new QCheckBox(gridLayoutWidget);
+        is_emergency->setObjectName("is_emergency");
 
-        verticalLayout_3->addWidget(victims_entry);
+        gridLayout->addWidget(is_emergency, 5, 4, 1, 1);
 
-        deads_entry = new QLineEdit(gridLayoutWidget);
-        deads_entry->setObjectName("deads_entry");
+        street_entry = new QLineEdit(gridLayoutWidget);
+        street_entry->setObjectName("street_entry");
 
-        verticalLayout_3->addWidget(deads_entry);
+        gridLayout->addWidget(street_entry, 1, 2, 1, 1);
 
+        phone_label = new QLabel(gridLayoutWidget);
+        phone_label->setObjectName("phone_label");
+        sizePolicy3.setHeightForWidth(phone_label->sizePolicy().hasHeightForWidth());
+        phone_label->setSizePolicy(sizePolicy3);
+        phone_label->setAutoFillBackground(false);
+        phone_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
 
-        gridLayout->addLayout(verticalLayout_3, 7, 4, 1, 1);
+        gridLayout->addWidget(phone_label, 13, 0, 1, 1);
+
+        full_name_entry = new QLineEdit(gridLayoutWidget);
+        full_name_entry->setObjectName("full_name_entry");
+
+        gridLayout->addWidget(full_name_entry, 11, 2, 1, 1);
+
+        help_3 = new QLabel(gridLayoutWidget);
+        help_3->setObjectName("help_3");
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(help_3->sizePolicy().hasHeightForWidth());
+        help_3->setSizePolicy(sizePolicy4);
+        QFont font2;
+        font2.setPointSize(14);
+        font2.setBold(true);
+        help_3->setFont(font2);
+        help_3->setAutoFillBackground(false);
+        help_3->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(help_3, 10, 2, 1, 1);
+
+        incident_vid_label = new QLabel(gridLayoutWidget);
+        incident_vid_label->setObjectName("incident_vid_label");
+        sizePolicy3.setHeightForWidth(incident_vid_label->sizePolicy().hasHeightForWidth());
+        incident_vid_label->setSizePolicy(sizePolicy3);
+        incident_vid_label->setAutoFillBackground(false);
+        incident_vid_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(incident_vid_label, 4, 0, 1, 1);
+
+        is_03 = new QCheckBox(gridLayoutWidget);
+        is_03->setObjectName("is_03");
+
+        gridLayout->addWidget(is_03, 13, 4, 1, 1);
+
+        adress_entry = new QLineEdit(gridLayoutWidget);
+        adress_entry->setObjectName("adress_entry");
+
+        gridLayout->addWidget(adress_entry, 12, 2, 1, 1);
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setObjectName("verticalLayout_4");
@@ -415,151 +400,10 @@ public:
 
         gridLayout->addLayout(verticalLayout_4, 7, 3, 1, 1);
 
-        help = new QLabel(gridLayoutWidget);
-        help->setObjectName("help");
-        sizePolicy4.setHeightForWidth(help->sizePolicy().hasHeightForWidth());
-        help->setSizePolicy(sizePolicy4);
-        help->setFont(font2);
-        help->setAutoFillBackground(false);
-        help->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(help, 0, 2, 1, 1);
-
-        floor_label = new QLabel(gridLayoutWidget);
-        floor_label->setObjectName("floor_label");
-        sizePolicy3.setHeightForWidth(floor_label->sizePolicy().hasHeightForWidth());
-        floor_label->setSizePolicy(sizePolicy3);
-        floor_label->setAutoFillBackground(false);
-        floor_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(floor_label, 1, 5, 1, 1);
-
-        incident_type_label = new QLabel(gridLayoutWidget);
-        incident_type_label->setObjectName("incident_type_label");
-        sizePolicy3.setHeightForWidth(incident_type_label->sizePolicy().hasHeightForWidth());
-        incident_type_label->setSizePolicy(sizePolicy3);
-        incident_type_label->setAutoFillBackground(false);
-        incident_type_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(incident_type_label, 5, 0, 1, 1);
-
-        is_emergency = new QCheckBox(gridLayoutWidget);
-        is_emergency->setObjectName("is_emergency");
-
-        gridLayout->addWidget(is_emergency, 5, 4, 1, 1);
-
-        description_label = new QLabel(gridLayoutWidget);
-        description_label->setObjectName("description_label");
-        sizePolicy3.setHeightForWidth(description_label->sizePolicy().hasHeightForWidth());
-        description_label->setSizePolicy(sizePolicy3);
-        description_label->setAutoFillBackground(false);
-        description_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(description_label, 7, 0, 1, 1);
-
         floor_entry = new QLineEdit(gridLayoutWidget);
         floor_entry->setObjectName("floor_entry");
 
         gridLayout->addWidget(floor_entry, 1, 6, 1, 1);
-
-        is_02 = new QCheckBox(gridLayoutWidget);
-        is_02->setObjectName("is_02");
-
-        gridLayout->addWidget(is_02, 12, 4, 1, 1);
-
-        street_entry = new QLineEdit(gridLayoutWidget);
-        street_entry->setObjectName("street_entry");
-
-        gridLayout->addWidget(street_entry, 1, 2, 1, 1);
-
-        full_name_label = new QLabel(gridLayoutWidget);
-        full_name_label->setObjectName("full_name_label");
-        sizePolicy3.setHeightForWidth(full_name_label->sizePolicy().hasHeightForWidth());
-        full_name_label->setSizePolicy(sizePolicy3);
-        full_name_label->setAutoFillBackground(false);
-        full_name_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(full_name_label, 11, 0, 1, 1);
-
-        subject_entry = new QLineEdit(gridLayoutWidget);
-        subject_entry->setObjectName("subject_entry");
-
-        gridLayout->addWidget(subject_entry, 2, 6, 1, 1);
-
-        adress_entry = new QLineEdit(gridLayoutWidget);
-        adress_entry->setObjectName("adress_entry");
-
-        gridLayout->addWidget(adress_entry, 12, 2, 1, 1);
-
-        is_03 = new QCheckBox(gridLayoutWidget);
-        is_03->setObjectName("is_03");
-
-        gridLayout->addWidget(is_03, 13, 4, 1, 1);
-
-        full_name_entry = new QLineEdit(gridLayoutWidget);
-        full_name_entry->setObjectName("full_name_entry");
-
-        gridLayout->addWidget(full_name_entry, 11, 2, 1, 1);
-
-        is_01 = new QCheckBox(gridLayoutWidget);
-        is_01->setObjectName("is_01");
-
-        gridLayout->addWidget(is_01, 11, 4, 1, 1);
-
-        flat_label = new QLabel(gridLayoutWidget);
-        flat_label->setObjectName("flat_label");
-        sizePolicy3.setHeightForWidth(flat_label->sizePolicy().hasHeightForWidth());
-        flat_label->setSizePolicy(sizePolicy3);
-        flat_label->setAutoFillBackground(false);
-        flat_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(flat_label, 2, 3, 1, 1);
-
-        adress_label = new QLabel(gridLayoutWidget);
-        adress_label->setObjectName("adress_label");
-        sizePolicy3.setHeightForWidth(adress_label->sizePolicy().hasHeightForWidth());
-        adress_label->setSizePolicy(sizePolicy3);
-        adress_label->setAutoFillBackground(false);
-        adress_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(adress_label, 12, 0, 1, 1);
-
-        incident_vid_label = new QLabel(gridLayoutWidget);
-        incident_vid_label->setObjectName("incident_vid_label");
-        sizePolicy3.setHeightForWidth(incident_vid_label->sizePolicy().hasHeightForWidth());
-        incident_vid_label->setSizePolicy(sizePolicy3);
-        incident_vid_label->setAutoFillBackground(false);
-        incident_vid_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(incident_vid_label, 4, 0, 1, 1);
-
-        phone_label = new QLabel(gridLayoutWidget);
-        phone_label->setObjectName("phone_label");
-        sizePolicy3.setHeightForWidth(phone_label->sizePolicy().hasHeightForWidth());
-        phone_label->setSizePolicy(sizePolicy3);
-        phone_label->setAutoFillBackground(false);
-        phone_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
-
-        gridLayout->addWidget(phone_label, 13, 0, 1, 1);
-
-        flat_entry = new QLineEdit(gridLayoutWidget);
-        flat_entry->setObjectName("flat_entry");
-
-        gridLayout->addWidget(flat_entry, 2, 4, 1, 1);
-
-        incident_type_combox = new QComboBox(gridLayoutWidget);
-        incident_type_combox->addItem(QString());
-        incident_type_combox->addItem(QString());
-        incident_type_combox->addItem(QString());
-        incident_type_combox->addItem(QString());
-        incident_type_combox->setObjectName("incident_type_combox");
-
-        gridLayout->addWidget(incident_type_combox, 5, 2, 1, 1);
-
-        doorway_entry = new QLineEdit(gridLayoutWidget);
-        doorway_entry->setObjectName("doorway_entry");
-
-        gridLayout->addWidget(doorway_entry, 2, 2, 1, 1);
 
         description_entry = new QTextEdit(gridLayoutWidget);
         description_entry->setObjectName("description_entry");
@@ -571,43 +415,197 @@ public:
 
         gridLayout->addWidget(description_entry, 7, 2, 1, 1);
 
-        next_situation = new QPushButton(gridLayoutWidget);
-        next_situation->setObjectName("next_situation");
+        subject_label = new QLabel(gridLayoutWidget);
+        subject_label->setObjectName("subject_label");
+        sizePolicy3.setHeightForWidth(subject_label->sizePolicy().hasHeightForWidth());
+        subject_label->setSizePolicy(sizePolicy3);
+        subject_label->setAutoFillBackground(false);
+        subject_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
 
-        gridLayout->addWidget(next_situation, 15, 6, 1, 1);
+        gridLayout->addWidget(subject_label, 2, 5, 1, 1);
 
-        help_3 = new QLabel(gridLayoutWidget);
-        help_3->setObjectName("help_3");
-        sizePolicy4.setHeightForWidth(help_3->sizePolicy().hasHeightForWidth());
-        help_3->setSizePolicy(sizePolicy4);
-        help_3->setFont(font2);
-        help_3->setAutoFillBackground(false);
-        help_3->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+        house_label = new QLabel(gridLayoutWidget);
+        house_label->setObjectName("house_label");
+        sizePolicy3.setHeightForWidth(house_label->sizePolicy().hasHeightForWidth());
+        house_label->setSizePolicy(sizePolicy3);
+        house_label->setAutoFillBackground(false);
+        house_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
 
-        gridLayout->addWidget(help_3, 10, 2, 1, 1);
+        gridLayout->addWidget(house_label, 1, 3, 1, 1);
 
-        right_answers_count_3 = new QLabel(gridLayoutWidget);
-        right_answers_count_3->setObjectName("right_answers_count_3");
-        sizePolicy1.setHeightForWidth(right_answers_count_3->sizePolicy().hasHeightForWidth());
-        right_answers_count_3->setSizePolicy(sizePolicy1);
+        is_04 = new QCheckBox(gridLayoutWidget);
+        is_04->setObjectName("is_04");
 
-        gridLayout->addWidget(right_answers_count_3, 15, 2, 1, 1);
+        gridLayout->addWidget(is_04, 14, 4, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+
+        horizontalLayout_2->addLayout(horizontalLayout_3);
+
 
         gridLayout->addLayout(horizontalLayout_2, 7, 6, 1, 1);
+
+        help_2 = new QLabel(gridLayoutWidget);
+        help_2->setObjectName("help_2");
+        sizePolicy4.setHeightForWidth(help_2->sizePolicy().hasHeightForWidth());
+        help_2->setSizePolicy(sizePolicy4);
+        help_2->setFont(font2);
+        help_2->setAutoFillBackground(false);
+        help_2->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(help_2, 3, 2, 1, 1);
+
+        help_4 = new QLabel(gridLayoutWidget);
+        help_4->setObjectName("help_4");
+        sizePolicy4.setHeightForWidth(help_4->sizePolicy().hasHeightForWidth());
+        help_4->setSizePolicy(sizePolicy4);
+        help_4->setFont(font2);
+        help_4->setAutoFillBackground(false);
+        help_4->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(help_4, 10, 4, 1, 1);
+
+        adress_label = new QLabel(gridLayoutWidget);
+        adress_label->setObjectName("adress_label");
+        sizePolicy3.setHeightForWidth(adress_label->sizePolicy().hasHeightForWidth());
+        adress_label->setSizePolicy(sizePolicy3);
+        adress_label->setAutoFillBackground(false);
+        adress_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(adress_label, 12, 0, 1, 1);
+
+        is_01 = new QCheckBox(gridLayoutWidget);
+        is_01->setObjectName("is_01");
+
+        gridLayout->addWidget(is_01, 11, 4, 1, 1);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        victims_entry = new QLineEdit(gridLayoutWidget);
+        victims_entry->setObjectName("victims_entry");
+
+        verticalLayout_3->addWidget(victims_entry);
+
+        deads_entry = new QLineEdit(gridLayoutWidget);
+        deads_entry->setObjectName("deads_entry");
+
+        verticalLayout_3->addWidget(deads_entry);
+
+
+        gridLayout->addLayout(verticalLayout_3, 7, 4, 1, 1);
+
+        help = new QLabel(gridLayoutWidget);
+        help->setObjectName("help");
+        sizePolicy4.setHeightForWidth(help->sizePolicy().hasHeightForWidth());
+        help->setSizePolicy(sizePolicy4);
+        help->setFont(font2);
+        help->setAutoFillBackground(false);
+        help->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(help, 0, 2, 1, 1);
+
+        flat_label = new QLabel(gridLayoutWidget);
+        flat_label->setObjectName("flat_label");
+        sizePolicy3.setHeightForWidth(flat_label->sizePolicy().hasHeightForWidth());
+        flat_label->setSizePolicy(sizePolicy3);
+        flat_label->setAutoFillBackground(false);
+        flat_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(flat_label, 2, 3, 1, 1);
+
+        doorway_entry = new QLineEdit(gridLayoutWidget);
+        doorway_entry->setObjectName("doorway_entry");
+
+        gridLayout->addWidget(doorway_entry, 2, 2, 1, 1);
+
+        flat_entry = new QLineEdit(gridLayoutWidget);
+        flat_entry->setObjectName("flat_entry");
+
+        gridLayout->addWidget(flat_entry, 2, 4, 1, 1);
+
+        description_label = new QLabel(gridLayoutWidget);
+        description_label->setObjectName("description_label");
+        sizePolicy3.setHeightForWidth(description_label->sizePolicy().hasHeightForWidth());
+        description_label->setSizePolicy(sizePolicy3);
+        description_label->setAutoFillBackground(false);
+        description_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(description_label, 7, 0, 1, 1);
+
+        subject_entry = new QLineEdit(gridLayoutWidget);
+        subject_entry->setObjectName("subject_entry");
+
+        gridLayout->addWidget(subject_entry, 2, 6, 1, 1);
+
+        doorway_label = new QLabel(gridLayoutWidget);
+        doorway_label->setObjectName("doorway_label");
+        sizePolicy3.setHeightForWidth(doorway_label->sizePolicy().hasHeightForWidth());
+        doorway_label->setSizePolicy(sizePolicy3);
+        doorway_label->setAutoFillBackground(false);
+        doorway_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(doorway_label, 2, 0, 1, 1);
+
+        is_thread = new QCheckBox(gridLayoutWidget);
+        is_thread->setObjectName("is_thread");
+
+        gridLayout->addWidget(is_thread, 4, 4, 1, 1);
+
+        incident_type_label = new QLabel(gridLayoutWidget);
+        incident_type_label->setObjectName("incident_type_label");
+        sizePolicy3.setHeightForWidth(incident_type_label->sizePolicy().hasHeightForWidth());
+        incident_type_label->setSizePolicy(sizePolicy3);
+        incident_type_label->setAutoFillBackground(false);
+        incident_type_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(incident_type_label, 5, 0, 1, 1);
+
+        incident_type_combox = new QComboBox(gridLayoutWidget);
+        incident_type_combox->addItem(QString());
+        incident_type_combox->addItem(QString());
+        incident_type_combox->addItem(QString());
+        incident_type_combox->addItem(QString());
+        incident_type_combox->setObjectName("incident_type_combox");
+
+        gridLayout->addWidget(incident_type_combox, 5, 2, 1, 1);
+
+        full_name_label = new QLabel(gridLayoutWidget);
+        full_name_label->setObjectName("full_name_label");
+        sizePolicy3.setHeightForWidth(full_name_label->sizePolicy().hasHeightForWidth());
+        full_name_label->setSizePolicy(sizePolicy3);
+        full_name_label->setAutoFillBackground(false);
+        full_name_label->setAlignment(Qt::AlignHCenter|Qt::AlignTop);
+
+        gridLayout->addWidget(full_name_label, 11, 0, 1, 1);
+
+        house_entry = new QLineEdit(gridLayoutWidget);
+        house_entry->setObjectName("house_entry");
+
+        gridLayout->addWidget(house_entry, 1, 4, 1, 1);
+
+        phone_entry = new QLineEdit(gridLayoutWidget);
+        phone_entry->setObjectName("phone_entry");
+
+        gridLayout->addWidget(phone_entry, 13, 2, 1, 1);
 
         play_audio = new QPushButton(gridLayoutWidget);
         play_audio->setObjectName("play_audio");
 
-        gridLayout->addWidget(play_audio, 14, 6, 1, 1);
+        gridLayout->addWidget(play_audio, 13, 6, 1, 1);
+
+        next_situation = new QPushButton(gridLayoutWidget);
+        next_situation->setObjectName("next_situation");
+
+        gridLayout->addWidget(next_situation, 14, 6, 1, 1);
 
         pages->addWidget(practice);
 
         retranslateUi(Widget);
 
-        pages->setCurrentIndex(2);
+        pages->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -630,43 +628,42 @@ public:
         right_answers_count_2->setText(QCoreApplication::translate("Widget", "\320\237\321\200\320\260\320\262\320\270\320\273\321\214\320\275\321\213\321\205 \320\276\321\202\320\262\320\265\321\202\320\276\320\262: ", nullptr));
         pushButton_2->setText(QCoreApplication::translate("Widget", "\320\227\320\260\320\275\320\276\320\262\320\276", nullptr));
         end_test->setText(QCoreApplication::translate("Widget", "\320\235\320\260\320\267\320\260\320\264", nullptr));
-        doorway_label->setText(QCoreApplication::translate("Widget", "\320\237\320\276\320\264\321\212\320\265\320\267\320\264", nullptr));
-        is_04->setText(QCoreApplication::translate("Widget", "04", nullptr));
-        help_2->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\277\321\200\320\276\320\270\321\201\321\210\320\265\321\201\321\202\320\262\320\270\320\270", nullptr));
-        help_4->setText(QCoreApplication::translate("Widget", "\320\224\320\276\320\277\320\276\320\273\320\275\320\270\321\202\320\265\320\273\321\214\320\275\320\260\321\217 \320\270\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", nullptr));
-        is_thread->setText(QCoreApplication::translate("Widget", "\320\243\320\263\321\200\320\276\320\267\320\260 \320\273\321\216\320\264\321\217\320\274", nullptr));
-        subject_label->setText(QCoreApplication::translate("Widget", "\320\236\320\261\321\212\320\265\320\272\321\202", nullptr));
-        house_label->setText(QCoreApplication::translate("Widget", "\320\224\320\276\320\274", nullptr));
         incident_vid_combox->setItemText(0, QCoreApplication::translate("Widget", "1", nullptr));
         incident_vid_combox->setItemText(1, QCoreApplication::translate("Widget", "2", nullptr));
         incident_vid_combox->setItemText(2, QCoreApplication::translate("Widget", "3", nullptr));
         incident_vid_combox->setItemText(3, QCoreApplication::translate("Widget", "4", nullptr));
 
+        floor_label->setText(QCoreApplication::translate("Widget", "\320\255\321\202\320\260\320\266", nullptr));
+        is_02->setText(QCoreApplication::translate("Widget", "02", nullptr));
         street_label->setText(QCoreApplication::translate("Widget", "\320\243\320\273\320\270\321\206\320\260", nullptr));
+        is_emergency->setText(QCoreApplication::translate("Widget", "\320\237\321\200\320\270\320\267\320\275\320\260\320\272 \320\247\320\241", nullptr));
+        phone_label->setText(QCoreApplication::translate("Widget", "\320\242\320\265\320\273\320\265\321\204\320\276\320\275", nullptr));
+        help_3->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\267\320\260\321\217\320\262\320\270\321\202\320\265\320\273\320\265", nullptr));
+        incident_vid_label->setText(QCoreApplication::translate("Widget", "\320\222\320\270\320\264 \320\277\321\200\320\276\320\270\321\201\321\210\320\265\321\201\321\202\320\262\320\270\321\217", nullptr));
+        is_03->setText(QCoreApplication::translate("Widget", "03", nullptr));
         victims->setText(QCoreApplication::translate("Widget", "\320\237\320\276\321\201\321\202\321\200\320\260\320\264\320\260\320\262\321\210\320\270\321\205", nullptr));
         deads->setText(QCoreApplication::translate("Widget", "\320\237\320\276\320\263\320\270\320\261\321\210\320\270\321\205", nullptr));
-        help->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\274\320\265\321\201\321\202\320\265 \320\277\321\200\320\276\320\270\321\210\320\265\321\201\321\202\320\262\320\270\321\217", nullptr));
-        floor_label->setText(QCoreApplication::translate("Widget", "\320\255\321\202\320\260\320\266", nullptr));
-        incident_type_label->setText(QCoreApplication::translate("Widget", "\320\242\320\270\320\277 \320\277\321\200\320\276\320\270\321\201\321\210\320\265\321\201\321\202\320\262\320\270\321\217", nullptr));
-        is_emergency->setText(QCoreApplication::translate("Widget", "\320\237\321\200\320\270\320\267\320\275\320\260\320\272 \320\247\320\241", nullptr));
-        description_label->setText(QCoreApplication::translate("Widget", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
-        is_02->setText(QCoreApplication::translate("Widget", "02", nullptr));
-        full_name_label->setText(QCoreApplication::translate("Widget", "\320\244\320\230\320\236", nullptr));
-        is_03->setText(QCoreApplication::translate("Widget", "03", nullptr));
-        is_01->setText(QCoreApplication::translate("Widget", "01", nullptr));
-        flat_label->setText(QCoreApplication::translate("Widget", "\320\232\320\262\320\260\321\200\321\202\320\270\321\200\320\260", nullptr));
+        subject_label->setText(QCoreApplication::translate("Widget", "\320\236\320\261\321\212\320\265\320\272\321\202", nullptr));
+        house_label->setText(QCoreApplication::translate("Widget", "\320\224\320\276\320\274", nullptr));
+        is_04->setText(QCoreApplication::translate("Widget", "04", nullptr));
+        help_2->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\277\321\200\320\276\320\270\321\201\321\210\320\265\321\201\321\202\320\262\320\270\320\270", nullptr));
+        help_4->setText(QCoreApplication::translate("Widget", "\320\224\320\276\320\277\320\276\320\273\320\275\320\270\321\202\320\265\320\273\321\214\320\275\320\260\321\217 \320\270\320\275\321\204\320\276\321\200\320\274\320\260\321\206\320\270\321\217", nullptr));
         adress_label->setText(QCoreApplication::translate("Widget", "\320\220\320\264\321\200\320\265\321\201", nullptr));
-        incident_vid_label->setText(QCoreApplication::translate("Widget", "\320\222\320\270\320\264 \320\277\321\200\320\276\320\270\321\201\321\210\320\265\321\201\321\202\320\262\320\270\321\217", nullptr));
-        phone_label->setText(QCoreApplication::translate("Widget", "\320\242\320\265\320\273\320\265\321\204\320\276\320\275", nullptr));
+        is_01->setText(QCoreApplication::translate("Widget", "01", nullptr));
+        help->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\274\320\265\321\201\321\202\320\265 \320\277\321\200\320\276\320\270\321\210\320\265\321\201\321\202\320\262\320\270\321\217", nullptr));
+        flat_label->setText(QCoreApplication::translate("Widget", "\320\232\320\262\320\260\321\200\321\202\320\270\321\200\320\260", nullptr));
+        description_label->setText(QCoreApplication::translate("Widget", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
+        doorway_label->setText(QCoreApplication::translate("Widget", "\320\237\320\276\320\264\321\212\320\265\320\267\320\264", nullptr));
+        is_thread->setText(QCoreApplication::translate("Widget", "\320\243\320\263\321\200\320\276\320\267\320\260 \320\273\321\216\320\264\321\217\320\274", nullptr));
+        incident_type_label->setText(QCoreApplication::translate("Widget", "\320\242\320\270\320\277 \320\277\321\200\320\276\320\270\321\201\321\210\320\265\321\201\321\202\320\262\320\270\321\217", nullptr));
         incident_type_combox->setItemText(0, QCoreApplication::translate("Widget", "1", nullptr));
         incident_type_combox->setItemText(1, QCoreApplication::translate("Widget", "2", nullptr));
         incident_type_combox->setItemText(2, QCoreApplication::translate("Widget", "3", nullptr));
         incident_type_combox->setItemText(3, QCoreApplication::translate("Widget", "4", nullptr));
 
+        full_name_label->setText(QCoreApplication::translate("Widget", "\320\244\320\230\320\236", nullptr));
+        play_audio->setText(QCoreApplication::translate("Widget", "\320\222\320\276\321\201\320\277\321\200\320\276\320\270\320\267\320\262\320\265\321\201\321\202\320\270 \320\260\321\203\320\264\320\270\320\276\321\204\320\260\320\271\320\273", nullptr));
         next_situation->setText(QCoreApplication::translate("Widget", "\320\241\320\273\320\265\320\264\321\203\321\211\320\260\321\217 \321\201\320\270\321\202\321\203\320\260\321\206\320\270\321\217", nullptr));
-        help_3->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\267\320\260\321\217\320\262\320\270\321\202\320\265\320\273\320\265", nullptr));
-        right_answers_count_3->setText(QCoreApplication::translate("Widget", "\320\237\321\200\320\260\320\262\320\270\320\273\321\214\320\275\321\213\321\205 \320\276\321\202\320\262\320\265\321\202\320\276\320\262: 0", nullptr));
-        play_audio->setText(QCoreApplication::translate("Widget", "Play", nullptr));
     } // retranslateUi
 
 };

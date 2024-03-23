@@ -36,10 +36,10 @@ QList<question> load_questions(QString file) {
     int questions_count = json["questions"].toArray().size();
     for(int i = 0; i < questions_count; i++){
         questions.append(question());
-        questions[i].set_variants({json["questions"][i]["answers"][0].toString(),
+        questions[i].set_variants( {json["questions"][i]["answers"][0].toString(),
                                     json["questions"][i]["answers"][1].toString(),
                                     json["questions"][i]["answers"][2].toString()});
-        questions[i].question_text = json["questions"][i]["question"].toString();
+        questions[i].question_text =json["questions"][i]["question"].toString();
         questions[i].right_answer = json["questions"][i]["right_answer"].toInt();
     }
     json_file.close();
