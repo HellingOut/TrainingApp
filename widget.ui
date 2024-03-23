@@ -50,7 +50,7 @@
     </size>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="main">
     <property name="sizePolicy">
@@ -866,34 +866,6 @@
        <widget class="QPushButton" name="play_audio">
         <property name="text">
          <string>Play</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="practice_results">
-    <widget class="QWidget" name="gridLayoutWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>9</y>
-       <width>1241</width>
-       <height>681</height>
-      </rect>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Модуль 3 пройден. Правильных ответов - </string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>Назад</string>
         </property>
        </widget>
       </item>

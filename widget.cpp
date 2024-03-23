@@ -10,6 +10,8 @@
 #include <QUrl>
 #include <QAudioOutput>
 
+bool is_task_completed = false;
+
 //Объявляем список из вопросов
 QList<question> questions;
 QList<practice_question> practice_questions;
@@ -98,6 +100,10 @@ void Widget::on_next_situation_pressed()
         if(entries.at(i)->text() != practice_questions.at(current_question).entries.at(i)){
             is_wrong = true;
             entries.at(i)->setStyleSheet("background:#ec755b");
+            entries.at(i)->setText(practice_questions.at(current_question).entries.at(i));
+        }
+        else{
+            entries.at(i)->setStyleSheet("background:#84e97a");
         }
     }
     for(int i = 0; i < big_entries.size(); i++){
@@ -112,9 +118,11 @@ void Widget::on_next_situation_pressed()
         if(combo_boxes.at(i)->currentIndex() != practice_questions.at(current_question).combo_boxes.at(i))
             is_wrong = true;
     }
-    if(!is_wrong){
+    if(!is_wrong and !is_task_completed){
         right_answers_count++;
         ui->right_answers_count_3->setText("Правильных ответов: " + QString::number(right_answers_count));
+    }
+    if(is_task_completed){
         for(int i = 0; i < entries.size(); i++){
             entries.at(i)->setText("");
         }
@@ -128,13 +136,18 @@ void Widget::on_next_situation_pressed()
             combo_boxes.at(i)->setCurrentIndex(0);
         }
     }
-    if(current_question < practice_questions_count - 1){
-        qDebug() << practice_questions_count;
-        current_question += 1;
+    if(is_task_completed){
+        is_task_completed = false;
+        if(current_question < practice_questions_count-1){
+            current_question += 1;
+        }
+        else{
+            ui->pages->setCurrentIndex(2);
+            ui->right_answers_count_2->setText("Правильных ответов: "+ QString::number(right_answers_count));
+        }
+        return;
     }
-    else{
-        ui->pages->setCurrentIndex(0);
-    }
+    is_task_completed = true;
 }
 Widget::~Widget(){delete ui;}
 

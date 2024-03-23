@@ -104,11 +104,6 @@ public:
     QLabel *right_answers_count_3;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *play_audio;
-    QWidget *practice_results;
-    QWidget *gridLayoutWidget_2;
-    QGridLayout *gridLayout_2;
-    QLabel *label;
-    QPushButton *pushButton;
 
     void setupUi(QWidget *Widget)
     {
@@ -609,29 +604,10 @@ public:
         gridLayout->addWidget(play_audio, 14, 6, 1, 1);
 
         pages->addWidget(practice);
-        practice_results = new QWidget();
-        practice_results->setObjectName("practice_results");
-        gridLayoutWidget_2 = new QWidget(practice_results);
-        gridLayoutWidget_2->setObjectName("gridLayoutWidget_2");
-        gridLayoutWidget_2->setGeometry(QRect(5, 9, 1241, 681));
-        gridLayout_2 = new QGridLayout(gridLayoutWidget_2);
-        gridLayout_2->setObjectName("gridLayout_2");
-        gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(gridLayoutWidget_2);
-        label->setObjectName("label");
-
-        gridLayout_2->addWidget(label, 0, 0, 1, 1);
-
-        pushButton = new QPushButton(gridLayoutWidget_2);
-        pushButton->setObjectName("pushButton");
-
-        gridLayout_2->addWidget(pushButton, 0, 1, 1, 1);
-
-        pages->addWidget(practice_results);
 
         retranslateUi(Widget);
 
-        pages->setCurrentIndex(4);
+        pages->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -691,8 +667,6 @@ public:
         help_3->setText(QCoreApplication::translate("Widget", "\320\241\320\262\320\265\320\264\320\265\320\275\320\270\321\217 \320\276 \320\267\320\260\321\217\320\262\320\270\321\202\320\265\320\273\320\265", nullptr));
         right_answers_count_3->setText(QCoreApplication::translate("Widget", "\320\237\321\200\320\260\320\262\320\270\320\273\321\214\320\275\321\213\321\205 \320\276\321\202\320\262\320\265\321\202\320\276\320\262: 0", nullptr));
         play_audio->setText(QCoreApplication::translate("Widget", "Play", nullptr));
-        label->setText(QCoreApplication::translate("Widget", "\320\234\320\276\320\264\321\203\320\273\321\214 3 \320\277\321\200\320\276\320\271\320\264\320\265\320\275. \320\237\321\200\320\260\320\262\320\270\320\273\321\214\320\275\321\213\321\205 \320\276\321\202\320\262\320\265\321\202\320\276\320\262 - ", nullptr));
-        pushButton->setText(QCoreApplication::translate("Widget", "\320\235\320\260\320\267\320\260\320\264", nullptr));
     } // retranslateUi
 
 };

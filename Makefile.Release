@@ -283,7 +283,7 @@ release/moc_widget.cpp: widget.h \
 		../../../../Qt/6.6.2/mingw_64/include/QtMultimedia/qaudio.h \
 		release/moc_predefs.h \
 		../../../../Qt/6.6.2/mingw_64/bin/moc.exe
-	C:\Qt\6.6.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/helling/Documents/TrainingApp/release/moc_predefs.h -IC:/Qt/6.6.2/mingw_64/mkspecs/win32-g++ -IC:/Users/helling/Documents/TrainingApp -IC:/Qt/6.6.2/mingw_64/include -IC:/Qt/6.6.2/mingw_64/include/QtMultimedia -IC:/Qt/6.6.2/mingw_64/include/QtWidgets -IC:/Qt/6.6.2/mingw_64/include/QtGui -IC:/Qt/6.6.2/mingw_64/include/QtNetwork -IC:/Qt/6.6.2/mingw_64/include/QtCore -Ic:/programming/gcc/include/c++/11.3.0 -Ic:/programming/gcc/include/c++/11.3.0/x86_64-w64-mingw32 -Ic:/programming/gcc/include/c++/11.3.0/backward -Ic:/programming/gcc/lib/gcc/x86_64-w64-mingw32/11.3.0/include -Ic:/programming/gcc/lib/gcc/x86_64-w64-mingw32/11.3.0/include-fixed -Ic:/programming/gcc/x86_64-w64-mingw32/include widget.h -o release\moc_widget.cpp
+	C:\Qt\6.6.2\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/helling/Documents/TrainingApp/release/moc_predefs.h -IC:/Qt/6.6.2/mingw_64/mkspecs/win32-g++ -IC:/Users/helling/Documents/TrainingApp -IC:/Qt/6.6.2/mingw_64/include -IC:/Qt/6.6.2/mingw_64/include/QtMultimedia -IC:/Qt/6.6.2/mingw_64/include/QtWidgets -IC:/Qt/6.6.2/mingw_64/include/QtGui -IC:/Qt/6.6.2/mingw_64/include/QtNetwork -IC:/Qt/6.6.2/mingw_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt" widget.h -o release\moc_widget.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -768,7 +768,10 @@ release/widget.o: widget.cpp widget.h \
 		../../../../Qt/6.6.2/mingw_64/include/QtCore/QJsonDocument \
 		../../../../Qt/6.6.2/mingw_64/include/QtCore/qjsondocument.h \
 		../../../../Qt/6.6.2/mingw_64/include/QtCore/QJsonArray \
-		../../../../Qt/6.6.2/mingw_64/include/QtCore/qjsonarray.h
+		../../../../Qt/6.6.2/mingw_64/include/QtCore/qjsonarray.h \
+		../../../../Qt/6.6.2/mingw_64/include/QtCore/QUrl \
+		../../../../Qt/6.6.2/mingw_64/include/QtMultimedia/QAudioOutput \
+		../../../../Qt/6.6.2/mingw_64/include/QtMultimedia/qaudiooutput.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\widget.o widget.cpp
 
 release/moc_widget.o: release/moc_widget.cpp 
