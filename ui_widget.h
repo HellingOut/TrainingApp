@@ -102,8 +102,9 @@ public:
     QLabel *full_name_label;
     QLineEdit *house_entry;
     QLineEdit *phone_entry;
-    QPushButton *play_audio;
     QPushButton *next_situation;
+    QPushButton *play_audio;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *Widget)
     {
@@ -591,21 +592,26 @@ public:
 
         gridLayout->addWidget(phone_entry, 13, 2, 1, 1);
 
-        play_audio = new QPushButton(gridLayoutWidget);
-        play_audio->setObjectName("play_audio");
-
-        gridLayout->addWidget(play_audio, 13, 6, 1, 1);
-
         next_situation = new QPushButton(gridLayoutWidget);
         next_situation->setObjectName("next_situation");
 
         gridLayout->addWidget(next_situation, 14, 6, 1, 1);
 
+        play_audio = new QPushButton(gridLayoutWidget);
+        play_audio->setObjectName("play_audio");
+
+        gridLayout->addWidget(play_audio, 12, 6, 1, 1);
+
+        pushButton = new QPushButton(gridLayoutWidget);
+        pushButton->setObjectName("pushButton");
+
+        gridLayout->addWidget(pushButton, 13, 6, 1, 1);
+
         pages->addWidget(practice);
 
         retranslateUi(Widget);
 
-        pages->setCurrentIndex(1);
+        pages->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -662,8 +668,9 @@ public:
         incident_type_combox->setItemText(3, QCoreApplication::translate("Widget", "4", nullptr));
 
         full_name_label->setText(QCoreApplication::translate("Widget", "\320\244\320\230\320\236", nullptr));
-        play_audio->setText(QCoreApplication::translate("Widget", "\320\222\320\276\321\201\320\277\321\200\320\276\320\270\320\267\320\262\320\265\321\201\321\202\320\270 \320\260\321\203\320\264\320\270\320\276\321\204\320\260\320\271\320\273", nullptr));
         next_situation->setText(QCoreApplication::translate("Widget", "\320\241\320\273\320\265\320\264\321\203\321\211\320\260\321\217 \321\201\320\270\321\202\321\203\320\260\321\206\320\270\321\217", nullptr));
+        play_audio->setText(QCoreApplication::translate("Widget", "\320\222\320\276\321\201\320\277\321\200\320\276\320\270\320\267\320\262\320\265\321\201\321\202\320\270 \320\260\321\203\320\264\320\270\320\276\321\204\320\260\320\271\320\273", nullptr));
+        pushButton->setText(QCoreApplication::translate("Widget", "\320\237\320\276\320\272\320\260\320\267\320\260\321\202\321\214 \320\262\320\265\321\200\320\275\321\213\320\271 \320\276\321\202\320\262\320\265\321\202", nullptr));
     } // retranslateUi
 
 };

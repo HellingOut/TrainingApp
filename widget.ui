@@ -50,7 +50,7 @@
     </size>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="main">
     <property name="sizePolicy">
@@ -846,17 +846,24 @@
       <item row="13" column="2">
        <widget class="QLineEdit" name="phone_entry"/>
       </item>
-      <item row="13" column="6">
+      <item row="14" column="6">
+       <widget class="QPushButton" name="next_situation">
+        <property name="text">
+         <string>Следущая ситуация</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="6">
        <widget class="QPushButton" name="play_audio">
         <property name="text">
          <string>Воспроизвести аудиофайл</string>
         </property>
        </widget>
       </item>
-      <item row="14" column="6">
-       <widget class="QPushButton" name="next_situation">
+      <item row="13" column="6">
+       <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>Следущая ситуация</string>
+         <string>Показать верный ответ</string>
         </property>
        </widget>
       </item>

@@ -17,7 +17,9 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
     void update_question();
-    static QList<QWidget> entries;
+    //static QList<QWidget> entries;
+
+
 
 private slots:
     void on_next_pressed();
@@ -28,13 +30,11 @@ private slots:
     void on_module_2_pressed();
     void on_exit_test_pressed();
     void on_end_test_pressed();
-
     void on_module_3_pressed();
-
     void on_next_situation_pressed();
-
-
     void on_play_audio_pressed();
+
+    void on_pushButton_pressed();
 
 private:
     Ui::Widget *ui;

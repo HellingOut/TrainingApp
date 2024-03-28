@@ -23,6 +23,11 @@ ushort current_variant = 0;
 ushort right_answers_count = 0;
 ushort practice_questions_count = 0;
 
+QList<QLineEdit*> entries;
+QList<QTextEdit*> big_entries;
+QList<QCheckBox*> checkboxes;
+QList<QComboBox*> combo_boxes;
+
 void reset_questions(){
     current_question = 0;
     right_answers_count = 0;
@@ -40,6 +45,38 @@ Widget::Widget(QWidget *parent)
     player = new QMediaPlayer(this);
     //Создаём экземпляр класса QAudioOutput для регулирования громкости и выбора аудиоустройств
     audioOutput = new QAudioOutput;
+    //Заполняем списки из практики указателями на элементы интерфейса
+    QList<QLineEdit*> local_entries = {
+        ui->street_entry,
+        ui->house_entry,
+        ui->floor_entry,
+        ui->doorway_entry,
+        ui->flat_entry,
+        ui->subject_entry,
+        ui->victims_entry,
+        ui->deads_entry,
+        ui->full_name_entry,
+        ui->adress_entry,
+        ui->phone_entry};
+    entries = local_entries;
+    QList<QTextEdit*> local_big_entries = {
+        ui->description_entry
+    };
+    big_entries = local_big_entries;
+    QList<QCheckBox*> local_checkboxes = {
+        ui->is_thread,
+        ui->is_emergency,
+        ui->is_01,
+        ui->is_02,
+        ui->is_03,
+        ui->is_04
+    };
+    checkboxes = local_checkboxes;
+    QList<QComboBox*> local_combo_boxes = {
+        ui->incident_vid_combox,
+        ui->incident_type_combox
+    };
+    combo_boxes = local_combo_boxes;
 }
 
 //Обновляем интерфейс теста
@@ -86,34 +123,6 @@ void Widget::on_next_pressed(){
 //При нажатии на следущую ситуацию - практика
 void Widget::on_next_situation_pressed()
 {
-    QList<QLineEdit*> entries = {
-        ui->street_entry,
-        ui->house_entry,
-        ui->floor_entry,
-        ui->doorway_entry,
-        ui->flat_entry,
-        ui->subject_entry,
-        ui->victims_entry,
-        ui->deads_entry,
-        ui->full_name_entry,
-        ui->adress_entry,
-        ui->phone_entry
-    };
-    QList<QTextEdit*> big_entries = {
-        ui->description_entry
-    };
-    QList<QCheckBox*> checkboxes = {
-        ui->is_thread,
-        ui->is_emergency,
-        ui->is_01,
-        ui->is_02,
-        ui->is_03,
-        ui->is_04
-    };
-    QList<QComboBox*> combo_boxes = {
-        ui->incident_vid_combox,
-        ui->incident_type_combox
-    };
     for(int i = 0; i < entries.size(); i++){
         entries.at(i)->setText("");
     }
@@ -170,3 +179,20 @@ void Widget::on_end_test_pressed(){ui->pages->setCurrentIndex(0);}
 void Widget::on_variant_1_pressed(){current_variant = 1;}
 void Widget::on_variant_2_pressed(){current_variant = 2;}
 void Widget::on_variant_3_pressed(){current_variant = 3;}
+
+void Widget::on_pushButton_pressed()
+{
+    for(int i = 0; i < entries.size(); i++){
+        entries.at(i)->setText(practice_questions.at(current_question).entries.at(i));
+    }
+    for(int i = 0; i < big_entries.size(); i++){
+        big_entries.at(i)->setPlainText(practice_questions.at(current_question).big_entries.at(i));
+    }
+    for(int i = 0; i < checkboxes.size(); i++){
+        checkboxes.at(i)->setChecked(practice_questions.at(current_question).checkboxes.at(i));
+    }
+    for(int i = 0; i < combo_boxes.size(); i++){
+        combo_boxes.at(i)->setCurrentIndex(practice_questions.at(current_question).combo_boxes.at(i));
+    }
+}
+
