@@ -170,6 +170,7 @@ void Widget::on_play_audio_pressed()
     QString sound = QFileInfo(practice_questions.at(current_question).audiofile).absoluteFilePath();
     player->setAudioOutput(audioOutput);
     player->setSource(QUrl::fromLocalFile(sound));
+    qDebug() << sound;
     audioOutput->setVolume(100);
     player->play();
 }
@@ -194,5 +195,11 @@ void Widget::on_pushButton_pressed()
     for(int i = 0; i < combo_boxes.size(); i++){
         combo_boxes.at(i)->setCurrentIndex(practice_questions.at(current_question).combo_boxes.at(i));
     }
+}
+
+
+void Widget::on_page_003_pressed()
+{
+
 }
 

@@ -33,8 +33,9 @@ private slots:
     void on_module_3_pressed();
     void on_next_situation_pressed();
     void on_play_audio_pressed();
-
     void on_pushButton_pressed();
+
+    void on_page_003_pressed();
 
 private:
     Ui::Widget *ui;
