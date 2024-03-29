@@ -4,12 +4,12 @@
 #include <QProcess>
 #include <QDir>
 #include <load_questions.cpp>
-//#include <cstdlib>
 #include <QDebug>
 #include <QMediaPlayer>
 #include <QUrl>
 #include <QAudioOutput>
 #include <QDesktopServices>
+
 bool is_next_presed = false;
 
 //Объявляем список из вопросов
@@ -208,6 +208,18 @@ void open_page(int page){
 void Widget::on_page_003_pressed(){open_page(3);}
 
 void Widget::on_page_008_pressed()
+{
+
+}
+
+
+void Widget::on_page_028_pressed()
+{
+
+}
+
+
+void Widget::on_page_070_pressed()
 {
 
 }

@@ -123,6 +123,7 @@ public:
     QPushButton *page_409;
     QPushButton *page_440;
     QPushButton *page_443;
+    QPushButton *pushButton_3;
 
     void setupUi(QWidget *Widget)
     {
@@ -138,7 +139,7 @@ public:
         Widget->setAutoFillBackground(false);
         pages = new QStackedWidget(Widget);
         pages->setObjectName("pages");
-        pages->setGeometry(QRect(9, 9, 1261, 701));
+        pages->setGeometry(QRect(9, -11, 1261, 731));
         sizePolicy.setHeightForWidth(pages->sizePolicy().hasHeightForWidth());
         pages->setSizePolicy(sizePolicy);
         pages->setMinimumSize(QSize(0, 0));
@@ -630,7 +631,7 @@ public:
         list_of_themes->setObjectName("list_of_themes");
         verticalLayoutWidget_4 = new QWidget(list_of_themes);
         verticalLayoutWidget_4->setObjectName("verticalLayoutWidget_4");
-        verticalLayoutWidget_4->setGeometry(QRect(9, 9, 1241, 686));
+        verticalLayoutWidget_4->setGeometry(QRect(289, 9, 631, 716));
         theme_list = new QVBoxLayout(verticalLayoutWidget_4);
         theme_list->setObjectName("theme_list");
         theme_list->setContentsMargins(0, 0, 0, 0);
@@ -710,6 +711,9 @@ public:
 
         theme_list->addWidget(page_443);
 
+        pushButton_3 = new QPushButton(list_of_themes);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setGeometry(QRect(1170, 690, 80, 24));
         pages->addWidget(list_of_themes);
 
         retranslateUi(Widget);
@@ -806,6 +810,7 @@ public:
 "\321\201\320\270\321\201\321\202\320\265\320\274\321\213 \320\276\320\261\320\265\321\201\320\277\320\265\321\207\320\265\320\275\320\270\321\217 \320\262\321\213\320\267\320\276\320\262\320\260 \321\215\320\272\321\201\321\202\321\200\320\265\320\275\320\275\321\213\321\205 \320\276\320\277\320\265\321\200\320\260\321\202\320\270\320\262\320\275\321\213\321\205 \321\201\320\273\321\203\320\266\320\261 \320\275\320\260 \321\202\320\265\321\200\321\200\320\270\321\202\320\276\321\200\320\270\320\270\n"
 "\320\240\320\276\321\201\321\201\320\270\320\271\321\201\320\272\320\276\320\271 \320\244\320\265\320\264\320\265\321\200\320\260\321\206\320\270\320\270\302\273.", nullptr));
         page_443->setText(QCoreApplication::translate("Widget", "15. \320\240\321\203\320\272\320\276\320\262\320\276\320\264\321\201\321\202\320\262\320\276 \320\277\320\276\320\273\321\214\320\267\320\276\320\262\320\260\321\202\320\265\320\273\321\217 \320\220\320\240\320\234 \320\224\320\236 \320\241\320\237\320\236 \302\253\320\230\320\241\320\242\320\236\320\232-\320\241\320\234\302\273.", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("Widget", "\320\235\320\260\320\267\320\260\320\264", nullptr));
     } // retranslateUi
 
 };

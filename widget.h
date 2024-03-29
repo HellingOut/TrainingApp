@@ -37,6 +37,12 @@ private slots:
 
     void on_page_003_pressed();
 
+    void on_page_008_pressed();
+
+    void on_page_028_pressed();
+
+    void on_page_070_pressed();
+
 private:
     Ui::Widget *ui;
     QMediaPlayer* player;
