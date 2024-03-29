@@ -197,7 +197,7 @@ void Widget::on_pushButton_pressed()
         combo_boxes.at(i)->setCurrentIndex(practice_questions.at(current_question).combo_boxes.at(i));
     }
 }
-void open_page(int page){
+void open_page(ushort page){
     QString pdf = QFileInfo("normativka.pdf").absoluteFilePath() + "#page=" + QString::number(page);
     QUrl url;
     url = QUrl::fromLocalFile(pdf);
@@ -206,21 +206,17 @@ void open_page(int page){
 }
 
 void Widget::on_page_003_pressed(){open_page(3);}
-
-void Widget::on_page_008_pressed()
-{
-
-}
-
-
-void Widget::on_page_028_pressed()
-{
-
-}
-
-
-void Widget::on_page_070_pressed()
-{
-
-}
-
+void Widget::on_page_008_pressed(){open_page(8);}
+void Widget::on_page_028_pressed(){open_page(28);}
+void Widget::on_page_070_pressed(){open_page(70);}
+void Widget::on_page_145_pressed(){open_page(145);}
+void Widget::on_page_262_pressed(){open_page(262);}
+void Widget::on_page_293_pressed(){open_page(293);}
+void Widget::on_page_319_pressed(){open_page(319);}
+void Widget::on_page_345_pressed(){open_page(345);}
+void Widget::on_page_360_pressed(){open_page(360);}
+void Widget::on_page_361_pressed(){open_page(361);}
+void Widget::on_page_401_pressed(){open_page(401);}
+void Widget::on_page_409_pressed(){open_page(409);}
+void Widget::on_page_440_pressed(){open_page(440);}
+void Widget::on_page_443_pressed(){open_page(443);}

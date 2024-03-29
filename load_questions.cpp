@@ -61,8 +61,8 @@ QList<practice_question> load_practice(QString file){
         practice_questions.append(practice_question());
         int adress_count = json["practice_questions"][i]["entries"].toArray().size();
         for(int j = 0; j < adress_count; j++){
-            practice_questions[i].entries.append(json["practice_questions"][i]["entries"][j].toString());
-            practice_questions[i].checkboxes.append(json["practice_questions"][i]["checkboxes"][j].toBool());
+            practice_questions[i].entries.append    (json["practice_questions"][i]["entries"][j].toString());
+            practice_questions[i].checkboxes.append (json["practice_questions"][i]["checkboxes"][j].toBool());
             practice_questions[i].combo_boxes.append(json["practice_questions"][i]["combo_boxes"][j].toInt());
             practice_questions[i].big_entries.append(json["practice_questions"][i]["big_entries"][j].toString());
         }
