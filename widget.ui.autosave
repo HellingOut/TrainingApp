@@ -32,9 +32,9 @@
    <property name="geometry">
     <rect>
      <x>9</x>
-     <y>9</y>
+     <y>-11</y>
      <width>1261</width>
-     <height>701</height>
+     <height>721</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -874,10 +874,10 @@
     <widget class="QWidget" name="verticalLayoutWidget_4">
      <property name="geometry">
       <rect>
-       <x>9</x>
+       <x>289</x>
        <y>9</y>
-       <width>1241</width>
-       <height>686</height>
+       <width>631</width>
+       <height>716</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="theme_list">
@@ -1005,6 +1005,19 @@
        </widget>
       </item>
      </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>690</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Назад</string>
+     </property>
     </widget>
    </widget>
   </widget>

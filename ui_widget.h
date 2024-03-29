@@ -630,7 +630,7 @@ public:
         list_of_themes->setObjectName("list_of_themes");
         verticalLayoutWidget_4 = new QWidget(list_of_themes);
         verticalLayoutWidget_4->setObjectName("verticalLayoutWidget_4");
-        verticalLayoutWidget_4->setGeometry(QRect(9, 9, 1241, 681));
+        verticalLayoutWidget_4->setGeometry(QRect(9, 9, 1241, 686));
         theme_list = new QVBoxLayout(verticalLayoutWidget_4);
         theme_list->setObjectName("theme_list");
         theme_list->setContentsMargins(0, 0, 0, 0);

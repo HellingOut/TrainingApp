@@ -4,12 +4,12 @@
 #include <QProcess>
 #include <QDir>
 #include <load_questions.cpp>
-#include <cstdlib>
+//#include <cstdlib>
 #include <QDebug>
 #include <QMediaPlayer>
 #include <QUrl>
 #include <QAudioOutput>
-
+#include <QDesktopServices>
 bool is_next_presed = false;
 
 //Объявляем список из вопросов
@@ -146,8 +146,9 @@ void Widget::on_next_situation_pressed()
 Widget::~Widget(){delete ui;}
 
 void Widget::on_module_1_pressed() {
+    ui->pages->setCurrentIndex(4);/*
     QString file = QDir::currentPath() + "/normativka.docx";
-    std::system(file.toStdString().c_str());
+    std::system(file.toStdString().c_str());*/
 }
 
 void Widget::on_module_2_pressed()
@@ -196,9 +197,17 @@ void Widget::on_pushButton_pressed()
         combo_boxes.at(i)->setCurrentIndex(practice_questions.at(current_question).combo_boxes.at(i));
     }
 }
+void open_page(int page){
+    QString pdf = QFileInfo("normativka.pdf").absoluteFilePath() + "#page=" + QString::number(page);
+    QUrl url;
+    url = QUrl::fromLocalFile(pdf);
+    url = QUrl::fromPercentEncoding(url.toString().toUtf8());
+    QDesktopServices::openUrl(url);
+}
 
+void Widget::on_page_003_pressed(){open_page(3);}
 
-void Widget::on_page_003_pressed()
+void Widget::on_page_008_pressed()
 {
 
 }
