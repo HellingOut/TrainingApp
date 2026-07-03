@@ -22,7 +22,8 @@ FORMS += \
 
 DISTFILES += \
     practice_1.json \
-    test_1.json
+    test_1.json \
+    .gitignore
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
