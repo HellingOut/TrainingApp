@@ -50,7 +50,7 @@
     </size>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="main">
     <property name="sizePolicy">
@@ -332,133 +332,6 @@
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="0">
-       <widget class="QLabel" name="doorway_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Подъезд</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="14" column="4">
-       <widget class="QCheckBox" name="is_04">
-        <property name="text">
-         <string>04</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="4">
-       <widget class="QLineEdit" name="house_entry"/>
-      </item>
-      <item row="3" column="2">
-       <widget class="QLabel" name="help_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Сведения о происшествии</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="13" column="2">
-       <widget class="QLineEdit" name="phone_entry"/>
-      </item>
-      <item row="10" column="4">
-       <widget class="QLabel" name="help_4">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Дополнительная информация</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="4">
-       <widget class="QCheckBox" name="is_thread">
-        <property name="text">
-         <string>Угроза людям</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="5">
-       <widget class="QLabel" name="subject_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Объект</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="3">
-       <widget class="QLabel" name="house_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Дом</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
       <item row="4" column="2">
        <widget class="QComboBox" name="incident_vid_combox">
         <item>
@@ -483,6 +356,32 @@
         </item>
        </widget>
       </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="floor_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Этаж</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="4">
+       <widget class="QCheckBox" name="is_02">
+        <property name="text">
+         <string>02</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="0">
        <widget class="QLabel" name="street_label">
         <property name="sizePolicy">
@@ -502,15 +401,91 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="4">
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <item>
-         <widget class="QLineEdit" name="victims_entry"/>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="deads_entry"/>
-        </item>
-       </layout>
+      <item row="5" column="4">
+       <widget class="QCheckBox" name="is_emergency">
+        <property name="text">
+         <string>Признак ЧС</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="street_entry"/>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="phone_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Телефон</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="2">
+       <widget class="QLineEdit" name="full_name_entry"/>
+      </item>
+      <item row="10" column="2">
+       <widget class="QLabel" name="help_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Сведения о заявителе</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="incident_vid_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Вид происшествия</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="4">
+       <widget class="QCheckBox" name="is_03">
+        <property name="text">
+         <string>03</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QLineEdit" name="adress_entry"/>
       </item>
       <item row="7" column="3">
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -554,8 +529,73 @@
         </item>
        </layout>
       </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="help">
+      <item row="1" column="6">
+       <widget class="QLineEdit" name="floor_entry"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QTextEdit" name="description_entry">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="subject_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Объект</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="house_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Дом</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="4">
+       <widget class="QCheckBox" name="is_04">
+        <property name="text">
+         <string>04</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="6">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="help_2">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -572,145 +612,32 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>Сведения о месте проишествия</string>
+         <string>Сведения о происшествии</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
         </property>
        </widget>
       </item>
-      <item row="1" column="5">
-       <widget class="QLabel" name="floor_label">
+      <item row="10" column="4">
+       <widget class="QLabel" name="help_4">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
         </property>
         <property name="autoFillBackground">
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>Этаж</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="incident_type_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Тип происшествия</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="4">
-       <widget class="QCheckBox" name="is_emergency">
-        <property name="text">
-         <string>Признак ЧС</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QLabel" name="description_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Описание</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="6">
-       <widget class="QLineEdit" name="floor_entry"/>
-      </item>
-      <item row="12" column="4">
-       <widget class="QCheckBox" name="is_02">
-        <property name="text">
-         <string>02</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLineEdit" name="street_entry"/>
-      </item>
-      <item row="11" column="0">
-       <widget class="QLabel" name="full_name_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>ФИО</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignHCenter|Qt::AlignTop</set>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="6">
-       <widget class="QLineEdit" name="subject_entry"/>
-      </item>
-      <item row="12" column="2">
-       <widget class="QLineEdit" name="adress_entry"/>
-      </item>
-      <item row="13" column="4">
-       <widget class="QCheckBox" name="is_03">
-        <property name="text">
-         <string>03</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="2">
-       <widget class="QLineEdit" name="full_name_entry"/>
-      </item>
-      <item row="11" column="4">
-       <widget class="QCheckBox" name="is_01">
-        <property name="text">
-         <string>01</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="3">
-       <widget class="QLabel" name="flat_label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Квартира</string>
+         <string>Дополнительная информация</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -736,27 +663,50 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
-       <widget class="QLabel" name="incident_vid_label">
+      <item row="11" column="4">
+       <widget class="QCheckBox" name="is_01">
+        <property name="text">
+         <string>01</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLineEdit" name="victims_entry"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="deads_entry"/>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="help">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
         </property>
         <property name="autoFillBackground">
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>Вид происшествия</string>
+         <string>Сведения о месте проишествия</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
         </property>
        </widget>
       </item>
-      <item row="13" column="0">
-       <widget class="QLabel" name="phone_label">
+      <item row="2" column="3">
+       <widget class="QLabel" name="flat_label">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -767,15 +717,85 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>Телефон</string>
+         <string>Квартира</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
         </property>
        </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="doorway_entry"/>
       </item>
       <item row="2" column="4">
        <widget class="QLineEdit" name="flat_entry"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="description_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Описание</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLineEdit" name="subject_entry"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="doorway_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Подъезд</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QCheckBox" name="is_thread">
+        <property name="text">
+         <string>Угроза людям</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="incident_type_label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Тип происшествия</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
       </item>
       <item row="5" column="2">
        <widget class="QComboBox" name="incident_type_combox">
@@ -801,71 +821,186 @@
         </item>
        </widget>
       </item>
-      <item row="2" column="2">
-       <widget class="QLineEdit" name="doorway_entry"/>
-      </item>
-      <item row="7" column="2">
-       <widget class="QTextEdit" name="description_entry">
+      <item row="11" column="0">
+       <widget class="QLabel" name="full_name_label">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
-        </property>
-       </widget>
-      </item>
-      <item row="15" column="6">
-       <widget class="QPushButton" name="next_situation">
-        <property name="text">
-         <string>Следущая ситуация</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="2">
-       <widget class="QLabel" name="help_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <bold>true</bold>
-         </font>
         </property>
         <property name="autoFillBackground">
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>Сведения о заявителе</string>
+         <string>ФИО</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
         </property>
        </widget>
       </item>
-      <item row="15" column="2">
-       <widget class="QLabel" name="right_answers_count_3">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
+      <item row="1" column="4">
+       <widget class="QLineEdit" name="house_entry"/>
+      </item>
+      <item row="13" column="2">
+       <widget class="QLineEdit" name="phone_entry"/>
+      </item>
+      <item row="14" column="6">
+       <widget class="QPushButton" name="next_situation">
         <property name="text">
-         <string>Правильных ответов: 0</string>
+         <string>Следущая ситуация</string>
         </property>
        </widget>
       </item>
-      <item row="7" column="6">
-       <layout class="QHBoxLayout" name="horizontalLayout_2"/>
-      </item>
-      <item row="14" column="6">
+      <item row="12" column="6">
        <widget class="QPushButton" name="play_audio">
         <property name="text">
-         <string>Play</string>
+         <string>Воспроизвести аудиофайл</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="6">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>Показать верный ответ</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="list_of_themes">
+    <widget class="QWidget" name="verticalLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>9</y>
+       <width>1241</width>
+       <height>686</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="theme_list">
+      <item>
+       <widget class="QPushButton" name="page_003">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>1. Постановление правительства №64 от 20.02.2012г. «О системе
+обеспечения вызовов экстренных оперативных служб по территории УР»</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_008">
+        <property name="text">
+         <string>2. Федеральный закон №395 от 28.12.2013г. «О государственной
+автоматизированной системе ЭРА-ГЛОНАСС»
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_028">
+        <property name="text">
+         <string>3. Федеральный закон №68 от 21.12.1994г. «О защите населения и
+территорий от ЧС природного и техногенного характера»</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_070">
+        <property name="text">
+         <string>4. Федеральный закон №69 от21.12.1994г. «О пожарной безопасности»</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_145">
+        <property name="text">
+         <string>5. Федеральный закон №126 от 07.07.2003г. «О связи».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_262">
+        <property name="text">
+         <string>6. Постановление правительства РФ №794 от 30.12.2003г. «О единой
+государственной системе предупреждения и ликвидации ЧС».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_293">
+        <property name="text">
+         <string>7. Постановление правительства УР №145 от 06.12.2004г. «Об Удмуртской
+территориальной подсистемы единой государственной системы
+предупреждения и ликвидации ЧС».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_319">
+        <property name="text">
+         <string>8. Приказ МЧС РФ №329 от 08.07.2004г. « Об утверждении критериев
+информации о ЧС».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_345">
+        <property name="text">
+         <string>9. Постановление правительства РФ №958 от 21.11.2011г. «О системе
+обеспечения вызова экстренных оперативных служб по единому номеру
+112».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_360">
+        <property name="text">
+         <string>10. Постановление Правительства 1453 от 31.08.2021г. «Об утверждении
+перечня экстренных оперативных служб, вызов которых круглосуточно и
+бесплатно обязан обеспечить оператор связи пользователю услугами связи».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_361">
+        <property name="text">
+         <string>11. Федеральный закон №151 от 22.08.1995г. «Об аварийно-спасательных
+службах и статусе спасателя».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_401">
+        <property name="text">
+         <string>12. Федеральный закон №28 от 12.02.1997г. «О гражданской обороне».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_409">
+        <property name="text">
+         <string>13. Федеральный закон №488 от 30.12.2020г. «О системе 112».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_440">
+        <property name="text">
+         <string>14. Указ Президента РФ №1632 от 28.12.2010г. « О совершенствовании
+системы обеспечения вызова экстренных оперативных служб на территории
+Российской Федерации».</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="page_443">
+        <property name="text">
+         <string>15. Руководство пользователя АРМ ДО СПО «ИСТОК-СМ».</string>
         </property>
        </widget>
       </item>
