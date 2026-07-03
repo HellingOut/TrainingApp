@@ -207,8 +207,3 @@ void open_page(int page){
 
 void Widget::on_page_003_pressed(){open_page(3);}
 
-void Widget::on_page_008_pressed()
-{
-
-}
-
